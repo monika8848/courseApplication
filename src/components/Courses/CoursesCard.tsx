@@ -2,7 +2,7 @@ import React from "react";
 import courseData from "../../dataset/courseData";
 import { useNavigate } from "react-router";
 
-const CoursesCard = () => {
+const CoursesCard = ({submittedData}:any) => {
   const navigate = useNavigate();
   const handelGoToCourse = () => {
     navigate("detail-page");
@@ -36,6 +36,16 @@ const CoursesCard = () => {
           );
         })}
       </div>
+      <div className="row">
+      {submittedData && (
+        <div className="mt-4">
+          <h4>Submitted Data on CoursesCard:</h4>
+          <p>Title: {submittedData.title}</p>
+          <p>Description: {submittedData.description}</p>
+          <p>Name: {submittedData.name}</p>
+        </div>
+      )}
+    </div>
     </div>
   );
 };
