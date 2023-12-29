@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import CoursesCard from "../Courses/CoursesCard";
+import CoursesCard from "./CoursesCard";
 
 const CreateCourse = () => {
   const [show, setShow] = useState(false);
-  const [submittedData, setSubmittedData] = useState(null);
+  const [submittedData, setSubmittedData] = useState({
+    title: "",
+    description: "",
+    course_by: "",
+    full_description: "",
+    img: "",
+    price: "",
+    stack: "",
+  });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const [fieldData, setFieldData] = useState<any>({
     title: "",
-    name: "",
     description: "",
+    course_by: "",
+    full_description: "",
+    img: "",
+    price: "",
+    stack: "",
   });
 
   const handelChange = (e: any) => {
@@ -34,11 +46,13 @@ const CreateCourse = () => {
       name: "",
       description: "",
     });
+    setShow(false);
   };
 
-  // const handelPost = ({ele}:any) => {
+  // const fieldDatas = [];
 
-  // }
+  // fieldDatas.push(...fieldData);
+
   return (
     <>
       <div>
@@ -78,8 +92,8 @@ const CreateCourse = () => {
                   type="text"
                   placeholder="Write your name"
                   className="input-field"
-                  name="name"
-                  value={fieldData.name}
+                  name="course_by"
+                  value={fieldData.course_by}
                   onChange={handelChange}
                 />
               </label>
@@ -97,19 +111,10 @@ const CreateCourse = () => {
                 </Button>
               </div>
             </form>
-
-            {submittedData && (
-              <div className="mt-4">
-                <h4>Submitted Data:</h4>
-                <p>Title: {submittedData.title}</p>
-                <p>Description: {submittedData.description}</p>
-                <p>Name: {submittedData.name}</p>
-              </div>
-            )}
           </Modal.Body>
         </Modal>
         <div className="" style={{ display: "none" }}>
-          <CoursesCard submittedData={submittedData} />
+          <CoursesCard newCourse={submittedData} />
         </div>
       </div>
     </>

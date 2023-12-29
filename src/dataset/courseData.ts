@@ -8,7 +8,7 @@ const courseData = [
     price: "3,199",
     img: "https://www.ntuclearninghub.com/documents/39367/4216797/Python-Symbol.png/369e410e-a90f-f887-c2dc-61f7ef761476/",
     stack: "backend",
-    id: "1",
+   
   },
   {
     title: "javascript",
@@ -53,7 +53,7 @@ const courseData = [
   {
     title: "AI",
     description: "Artificial Intelligence A-Z 2023: Build 5 AI (incl. ChatGPT)",
-    course_by: "superdata sscience team",
+    course_by: "superdata science team",
     price: "3,199",
     img: "https://media.geeksforgeeks.org/wp-content/uploads/20230911173805/What-is-Artiificial-Intelligence(AI).webp",
     stack: "other_technologies",
@@ -63,7 +63,7 @@ const courseData = [
   {
     title: "ML",
     description: "Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2023]",
-    course_by: "superdata sscience team",
+    course_by: "superdata science team",
     price: "3,199",
     img: "https://miro.medium.com/v2/resize:fit:1358/1*cG6U1qstYDijh9bPL42e-Q.jpeg",
     stack: "other_technologies",
