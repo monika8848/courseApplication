@@ -25,7 +25,7 @@ const CoursesCard = ({ newCourse }: any) => {
   //       newArray.push(newCourse);
   //       return newArray;
   //     });
-      
+
   //   }
   //   setSubmittedArray({...submittedDataArray})
 
@@ -38,9 +38,9 @@ const CoursesCard = ({ newCourse }: any) => {
     }
   }, [newCourse]);
 
-//   const Data =[];
-//    Data.push(...courseData);
-// console.log("data", Data)
+  //   const Data =[];
+  //    Data.push(...courseData);
+  // console.log("data", Data)
 
   // console.log("submittedDataArray", submittedDataArray);
   // const submittedDataArray:any = [];
@@ -57,29 +57,28 @@ const CoursesCard = ({ newCourse }: any) => {
   return (
     <div className="container">
       <div className="row">
-        {Data.length > 0 && Data.map((item: any, index: any) => {
-          return (
-            <div className="col-md-3 mb-4" key={index}>
-              <div className="card" key={index}>
-                {/* <img src={item.img} className="card-img-top" alt="course-img" /> */}
-                <div className="card-body">
-                  <h4 className="card-title text-capitalize blue">
-                    {item.title}
-                  </h4>
-                  <h6 className="text-capitalize">{item.course_by}</h6>
-                  <p className="card-text text-capitalize">
-                    {item.description}
-                  </p>
-                  <a onClick={handelGoToCourse} className="btn btn-primary">
-                    Go to course
-                  </a>
+        {Data.length > 0 &&
+          Data.map((item: any, index: any) => {
+            return (
+              <div className="col-md-3 mb-4" key={index}>
+                <div className="card" key={index}>
+                  {/* <img src={item.img} className="card-img-top" alt="course-img" /> */}
+                  <div className="card-body">
+                    <h4 className="card-title text-capitalize blue">
+                      {item.title}
+                    </h4>
+                    <h6 className="text-capitalize">{item.course_by}</h6>
+                    <p className="card-text text-capitalize">
+                      {item.description}
+                    </p>
+                    <a onClick={handelGoToCourse} className="btn btn-primary">
+                      Go to course
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-
-        
+            );
+          })}
       </div>
 
       {/* <div className="row">
