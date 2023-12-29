@@ -114,7 +114,7 @@ const CreateCourse = () => {
           </Modal.Body>
         </Modal>
         <div className="" style={{ display: "none" }}>
-          <CoursesCard newCourse={submittedData} />
+          {/* <CoursesCard newCourse={submittedData} /> */}
         </div>
       </div>
     </>
