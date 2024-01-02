@@ -17,15 +17,19 @@ const MasterCourses = ({ newCourse }: any) => {
   };
   console.log("handleCreateCourseSubmit", submittedDataArray);
 
-  // const handelRemove = (index:any) =>{
-  //   const newCourseCopyArr = [...newCourse]
-  //  const result =  newCourseCopyArr.slice(index);
-  //  console.log("result",result) ;
-  //  setSubmittedDataArray(result);
-  // }
+  const handelSort = () =>{
+    const newCourseCopyArr = [...submittedDataArray]
+    const result = newCourseCopyArr.slice().sort((a, b) => a.title.localeCompare(b.title));
+    console.log(result, "result");
+    setSubmittedDataArray(result);
+  }
   return (
     <>
       <CreateCourse onSubmit={handleCreateCourseSubmit} />
+      <div className="d-flex justify-content-end me-5 pe-5 mb-3">
+      <button className="btn btn-warning ms-3 " onClick={handelSort}>Sort A-Z ↑↓ </button>
+      </div>
+     
       <CoursesCard newCourse={submittedDataArray}   setSubmittedDataArray={setSubmittedDataArray}/>
     </>
   );

@@ -72,25 +72,25 @@ const handelReverse = () => {
                       Go to course
                     </a>
                     
+                    {/* <div>
+                       <button className="btn btn-danger my-2" onClick={handelRemoveOnlyLast}>Remove only last course</button>
+                    </div> */}
                     <div>
-                    <button className="btn btn-danger my-2" onClick={handelRemoveOnlyLast}>Remove only last course</button>
-                      </div>
-                 <div>
-             <button className="btn btn-success my-2" onClick={()=>handelRemove(index)}>Remove course</button>
-              </div>
-              <div>
-             <button className="btn btn-secondary my-2" onClick={handelSort}>Sort course</button>
-              </div>
+                      <button className="btn btn-success my-2" onClick={()=>handelRemove(index)}>Remove course</button>
+                    </div>
+                    {/* <div>
+                      <button className="btn btn-secondary my-2" onClick={handelSort}>Sort course</button>
+                    </div> */}
 
-              <div>
-             <button className="btn btn-warning my-2" onClick={handelReverse}>Reverse course</button>
-              </div>
-              <div>
-             <button className="btn btn-info my-2"> course</button>
-              </div>
-              <div>
-             <button className="btn btn-dark my-2"> course</button>
-              </div>
+                    {/* <div>
+                      <button className="btn btn-warning my-2" onClick={handelReverse}>Reverse course</button>
+                    </div> */}
+                    {/* <div>
+                      <button className="btn btn-info my-2"> course</button>
+                    </div>
+                    <div>
+                      <button className="btn btn-dark my-2"> course</button>
+                    </div> */}
                   </div>
                 </div>
               </div>
