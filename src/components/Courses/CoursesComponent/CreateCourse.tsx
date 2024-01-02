@@ -2,18 +2,17 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import CoursesCard from "./CoursesCard";
 
-const CreateCourse = () => {
+const CreateCourse = ({ onSubmit }: any) => {
   const [show, setShow] = useState(false);
   const [submittedData, setSubmittedData] = useState({
     title: "",
     description: "",
     course_by: "",
-    full_description: "",
-    img: "",
-    price: "",
-    stack: "",
+    // full_description: "",
+    // img: "",
+    // price: "",
+    // stack: "",
   });
 
   const handleClose = () => setShow(false);
@@ -23,10 +22,10 @@ const CreateCourse = () => {
     title: "",
     description: "",
     course_by: "",
-    full_description: "",
-    img: "",
-    price: "",
-    stack: "",
+    // full_description: "",
+    // img: "",
+    // price: "",
+    // stack: "",
   });
 
   const handelChange = (e: any) => {
@@ -40,11 +39,22 @@ const CreateCourse = () => {
   const handelSubmit = (e: any) => {
     e.preventDefault();
     console.log("new course added", fieldData);
+    console.log("onSubmit type:", typeof onSubmit);
+    console.log("onSubmit content:", onSubmit);
+
+    if (typeof onSubmit === "function") {
+      onSubmit(fieldData);
+      console.log("onSubmit called with data:", fieldData);
+    } else {
+      console.error("onSubmit is not a function");
+    }
+    // onSubmit(fieldData);
+    console.log("onSubmit", onSubmit);
     setSubmittedData({ ...fieldData });
     setFieldData({
       title: "",
-      name: "",
       description: "",
+      course_by: "",
     });
     setShow(false);
   };
@@ -56,7 +66,9 @@ const CreateCourse = () => {
   return (
     <>
       <div>
-        <a onClick={handleShow}>Create New Course</a>
+        <a onClick={handleShow} className="btn btn-success mb-3 ms-3">
+          Create New Course
+        </a>
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
@@ -113,9 +125,9 @@ const CreateCourse = () => {
             </form>
           </Modal.Body>
         </Modal>
-        <div className="" style={{ display: "none" }}>
-          {/* <CoursesCard newCourse={submittedData} /> */}
-        </div>
+        {/* <div className="" >
+          <CoursesCard newCourse={submittedData} />
+        </div> */}
       </div>
     </>
   );
