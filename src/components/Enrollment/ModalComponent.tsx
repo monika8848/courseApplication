@@ -20,7 +20,9 @@ const ModalComponent = () => {
         <Modal.Header closeButton>
           <Modal.Title>Enroll Now !</Modal.Title>
         </Modal.Header>
-        <Modal.Body><ApplicatonForm /></Modal.Body>
+        <Modal.Body>
+          <ApplicatonForm />
+        </Modal.Body>
         {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close

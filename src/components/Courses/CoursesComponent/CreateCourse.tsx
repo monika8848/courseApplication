@@ -9,7 +9,8 @@ const CreateCourse = ({ onSubmit }: any) => {
     title: "",
     description: "",
     course_by: "",
-    price:"",
+    price: "",
+    stack: "",
     // full_description: "",
     // img: "",
     // price: "",
@@ -23,7 +24,8 @@ const CreateCourse = ({ onSubmit }: any) => {
     title: "",
     description: "",
     course_by: "",
-    price:"",
+    price: "",
+    stack: "",
     // full_description: "",
     // img: "",
     // price: "",
@@ -57,6 +59,7 @@ const CreateCourse = ({ onSubmit }: any) => {
       title: "",
       description: "",
       course_by: "",
+      stack: "",
     });
     setShow(false);
   };
@@ -121,6 +124,18 @@ const CreateCourse = ({ onSubmit }: any) => {
                   name="price"
                   value={fieldData.price}
                   onChange={handelChange}
+                />
+              </label>
+              <label className="mt-4">
+                <span className="mx-3 fs-5 "> Stack : </span>
+                <input
+                  type="text"
+                  placeholder="stack of your course"
+                  className="input-field"
+                  name="stack"
+                  value={fieldData.stack}
+                  onChange={handelChange}
+                  required
                 />
               </label>
               <div className="text-center mt-4">

@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<HomePage />} />
+          {/* <Route path="/home/detail-page/:title" element={<MasterDetailPage />} /> */}
           <Route path="/home/detail-page" element={<MasterDetailPage />} />
           <Route
             path="home/detail-page/enrollment"

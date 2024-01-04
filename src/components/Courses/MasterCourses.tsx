@@ -17,7 +17,7 @@ const MasterCourses = ({ newCourse }: any) => {
   };
   console.log("handleCreateCourseSubmit", submittedDataArray);
 
-  const convertPriceToNumber = (price:any) => {
+  const convertPriceToNumber = (price: any) => {
     return price.replace(",", "");
   };
 
@@ -32,11 +32,21 @@ const MasterCourses = ({ newCourse }: any) => {
     let result;
     switch (sortOption) {
       case "low":
-        result = newCourseCopyArr.slice().sort((a, b) => convertPriceToNumber(a.price) - convertPriceToNumber(b.price));
+        result = newCourseCopyArr
+          .slice()
+          .sort(
+            (a, b) =>
+              convertPriceToNumber(a.price) - convertPriceToNumber(b.price)
+          );
         console.log("low");
         break;
       case "high":
-        result = newCourseCopyArr.slice().sort((a, b) => convertPriceToNumber(b.price) - convertPriceToNumber(a.price));
+        result = newCourseCopyArr
+          .slice()
+          .sort(
+            (a, b) =>
+              convertPriceToNumber(b.price) - convertPriceToNumber(a.price)
+          );
         console.log("high");
         break;
       case "highest-rating":
@@ -48,7 +58,9 @@ const MasterCourses = ({ newCourse }: any) => {
         console.log("lowest-rating");
         break;
       case "alphabetic-order":
-        result = newCourseCopyArr.slice().sort((a, b) => a.title.localeCompare(b.title));
+        result = newCourseCopyArr
+          .slice()
+          .sort((a, b) => a.title.localeCompare(b.title));
         console.log("alphabetic-order");
         break;
       default:
@@ -69,7 +81,10 @@ const MasterCourses = ({ newCourse }: any) => {
           className="py-2"
           onChange={(e: any) => handelSort(e.target.value)}
         >
-          <option value="" selected> sort by ↑↓</option>
+          <option value="" >
+            {" "}
+            sort by ↑↓
+          </option>
           <option value="low">low to high</option>
           <option value="high">high to low</option>
           <option value="highest-rating">highest rating</option>
