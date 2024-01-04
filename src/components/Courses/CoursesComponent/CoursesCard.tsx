@@ -82,6 +82,7 @@ const CoursesCard = ({ newCourse, setSubmittedDataArray }: any) => {
               Other Technologies
             </Nav.Link>
           </Nav.Item>
+          
         </Nav>
 
         <Tab.Content>

@@ -3,7 +3,7 @@ import courseData from "../../dataset/courseData";
 import ModalComponent from "../Enrollment/ModalComponent";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-const DetailPage = ({ newCourse }: any) => {
+const DetailPage = () => {
   // const location = useLocation();
   // const { title } = useParams<any>();
   // console.log("title",title)
@@ -71,6 +71,13 @@ const DetailPage = ({ newCourse }: any) => {
 };
 
 export default DetailPage;
+
+
+
+
+
+
+
 
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router";
