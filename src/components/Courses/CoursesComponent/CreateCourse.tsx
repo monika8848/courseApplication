@@ -9,6 +9,7 @@ const CreateCourse = ({ onSubmit }: any) => {
     title: "",
     description: "",
     course_by: "",
+    price:"",
     // full_description: "",
     // img: "",
     // price: "",
@@ -22,6 +23,7 @@ const CreateCourse = ({ onSubmit }: any) => {
     title: "",
     description: "",
     course_by: "",
+    price:"",
     // full_description: "",
     // img: "",
     // price: "",
@@ -66,7 +68,7 @@ const CreateCourse = ({ onSubmit }: any) => {
   return (
     <>
       <div>
-        <a onClick={handleShow} className="btn btn-success mb-3 ms-3">
+        <a onClick={handleShow} className="btn btn-success mb-3 ms-5">
           Create New Course
         </a>
 
@@ -110,10 +112,17 @@ const CreateCourse = ({ onSubmit }: any) => {
                 />
               </label>
               <br />
-              {/* <label className="mt-4">
-            <span className="mx-3 fs-5 "> Add Image : </span>
-            <img src="" alt="course-img" />
-          </label> */}
+              <label className="mt-4">
+                <span className="mx-3 fs-5 "> price for course : </span>
+                <input
+                  type="text"
+                  placeholder="course price"
+                  className="input-field"
+                  name="price"
+                  value={fieldData.price}
+                  onChange={handelChange}
+                />
+              </label>
               <div className="text-center mt-4">
                 <Button variant="secondary" onClick={handleClose}>
                   Close
