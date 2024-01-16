@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import MasterDetailPage from "./components/CourseDetail/MasterDetailPage";
 // import CreateCourse from "./components/CreateCourse/CreateCourse";
 import ModalComponent from "./components/Enrollment/ModalComponent";
+import Counter from "./components/CounterAPP/counter";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             element={<ModalComponent />}
           />
           {/* <Route path="/home/create-course" element={<CreateCourse/>}/> */}
+          <Route path="/counter" element={<Counter />} />
         </Routes>
       </Router>
     </div>
